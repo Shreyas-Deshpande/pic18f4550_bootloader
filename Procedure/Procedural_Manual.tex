@@ -1,0 +1,65 @@
+\documentclass[10pt,a4paper]{report}
+%\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\graphicspath{{./images/}}
+
+\begin{document}
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+\clearpage
+\thispagestyle{empty}
+
+\begin{tikzpicture}[overlay, remember picture]
+\draw[line width =4pt,rounded corners=15pt,double,blue]
+($(current page.north west)+ (0.5in,-0.5in)$)
+rectangle
+($(current page.south east)+(-0.5in,0.5in)$);
+
+
+\end{tikzpicture}
+
+
+\begin{center}
+\begin{Huge}
+\textbf{PIC18F4550}\par
+\vspace{0.7cm}
+Bootloader Installation
+\end{Huge}
+\vspace{1.5cm}
+\author{Shreyas Deshpande}
+\end{center}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[scale=0.5]{PIC.png}
+\end{figure}
+\hspace{3.5cm}
+\begin{center}
+\begin{Large}
+\textbf{By:}\par
+\textbf{Shreyas Deshpande}
+\end{Large}
+\end{center}
+
+\newpage
+
+\pagenumbering{Roman}
+
+\begin{normalsize}
+
+\tableofcontents
+
+\end{normalsize}
+
+\newpage
+
+\thispagestyle{plain}
+
+\pagenumbering{arabic}
+
+\chapter{Getting Started...}
+
+\end{document}
