@@ -61,5 +61,37 @@ Bootloader Installation
 \pagenumbering{arabic}
 
 \chapter{Getting Started...}
+\section{Pre-requisites}
+Before we start, its always better to collect the tools and other necessory stuff required to achive end result.
 
+\begin{itemize}
+\item PIC18F4550 Developement Board
+\item PICKIT-3
+\item PICKIT-3 PC Application
+\item Bootloader Hex file
+\item Bootloader device driver
+\item PDFSUSB Application \texttt{[For hex file upload]}
+\item LED blink demo hex file \texttt{[Optional]}
+\end{itemize}
+
+\section{Brief Procedure}
+We have provided you the folder with alll the \textit{installation} files, \textit{Hex} files and \textit{drivers}. Please Navigate to that folder and then follow the procedure given bellow.
+
+\begin{enumerate}
+\item \label{Step_1}Install the \textit{PICKIT-3 PC Application}
+\item Connect the \textit{PICKIT-3} with \textit{PIC18F4550} micro-controller. 
+\item Open the \textit{PICKIT-3 PC Application} installed in Step \ref{Step_1}.
+\item Upload the \textit{Bootloader hex file} into PIC18F4550 micro-controller.
+\item Remove the \textit{PICKIT-3} Programmer from micro-controller.
+\item Install the \textit{Bootloader Device Drivers} on the Windows.
+\item Put the PIC18F4550 Microcontroller in the program mode.
+\item Open the PDFSUSB Application
+\item Select the microcntroller
+\item Select the LED blink demo hex file or any other hex file you want to upload on the micro-controller.
+\item Click on the Program button, and wait for the hex file to get upload in the micro-controller.
+\item Reset the micro-controler to observe the output.
+\end{enumerate}
+
+This is the brief procedure for power users who are used to the \textit{Microchip's} and \textit{PIC microcontroller's} eco-system.\par
+If you are not familier with this eco-system or you find the above procedure hard, dont worry, I have given the detailed and stepwise procedure in later part of this document, which will guide you making your PIC bootloader experience buttery smooth. 
 \end{document}
