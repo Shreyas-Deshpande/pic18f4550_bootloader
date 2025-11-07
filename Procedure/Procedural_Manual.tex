@@ -94,4 +94,149 @@ We have provided you the folder with alll the \textit{installation} files, \text
 
 This is the brief procedure for power users who are used to the \textit{Microchip's} and \textit{PIC microcontroller's} eco-system.\par
 If you are not familier with this eco-system or you find the above procedure hard, don't worry, I have given the detailed and stepwise procedure in later part of this document, which will guide you making your PIC bootloader experience buttery smooth. 
+
+
+\chapter{Installing PICKIT-3 Application}
+This chapter guides you step-by-step to install the \textit{PICKIT-3 Application.} Follow the procedure as mentioned bellow and at the end you will end up with \textit{PICKIT-3 Application} installed in your PC succesfully.\par
+
+\section{Installation Procedure}
+\label{install_pickit3_app}
+\begin{enumerate}
+\item Navigate to the \textit{PICKIT-3 Application's} setup file location and double click on the exe file. After opening the exe file, a new window will appear as shown in figure \ref{pickit3_installer_1}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{Pickit3_app1.jpeg}
+\caption{Welcome Page}
+\label{pickit3_installer_1}
+\end{figure}
+
+\item On this window, click on the \textit{Next} button.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{Pickit3_app2.jpeg}
+\caption{Select Installation Location}
+\label{pickit3_installer_2}
+\end{figure}
+
+
+\item As we don't need to change the default location, just click on the \textit{Next} button, without changing any option shown in figure \ref{pickit3_installer_2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{Pickit3_app3.jpeg}
+\caption{Confirm Installtion}
+\label{pickit3_installer_3}
+\end{figure}
+
+\item Here, the installer is all set to install the application on the PC, click on the \textit{Next} button.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{Pickit3_app4.jpeg}
+\caption{License Agreement}
+\label{pickit3_installer_4}
+\end{figure}
+
+\item Next window appeared is of \textit{License Agreement}, Select the \textit{I Agree} radio button and then click on \textit{Next}. \texttt{[Refer Figure \ref{pickit3_installer_4}.]}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{Pickit3_app5.jpeg}
+\caption{Installation Complete}
+\label{pickit3_installer_5}
+\end{figure}
+
+\item We are now at last stage of our installation. At the end of the installation, the installer present you the window as shown in the figure \ref{pickit3_installer_5}. Click on the \textit{Close} button to close the installer.
+
+
+\end{enumerate}
+
+Congratulations !!! ... You have successfully installed the \textit{PICKIT-3 Application} on your PC.
+
+\section{Uploading Bootloader}
+Now you have installed the apllication, it's time to use that application to upload the PIC USB bootloder in to the \textit{PIC18F4550} micro-controller.\par
+Follow the steps given bellow to upload the USB bootloader.
+
+\begin{enumerate}
+
+\item If PIC18F4550 micro-controller is powerd ON, turn it OFF.
+\item Connect the PICKIT-3 to micro-controller.
+\item Now turn ON the micro-controller.
+\item Connect the \textit{PICKIT-3} to PC using USB Cable.
+
+\item Open the \textit{PICKIT-3 Application} we have installed in section \ref{install_pickit3_app}. A new Window will appear as shown in Figure \ref{Upload_Bootloader_1}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{Pickit3_app6.jpeg}
+\caption{PICkit-3 Application}
+\label{Upload_Bootloader_1}
+\end{figure}
+
+\item Now Navigate to \texttt{Tools -> Check Communication} as shown in the Figure \ref{Upload_Bootloader_2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{Pickit3_app7.jpeg}
+\caption{Check Connected Devices}
+\label{Upload_Bootloader_2}
+\end{figure}
+
+
+
+\item The application will detect the PICKIT-3 and the micro-controller connected through it as shhown in the Figure \ref{Upload_Bootloader_3}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{Pickit3_app8.jpeg}
+\caption{Device Detected}
+\label{Upload_Bootloader_3}
+\end{figure}
+
+\item Now We need to select the hex file of the bootloader. To do so, navigate to \texttt{File -> Import File} \textsl{Add image here(Pending)}
+
+\item Now navigate to the location where you have stored the bootloader's hex file and select the hex file as shown in the Figure \ref{Upload_Bootloader_5}. Here the filename of the hex file is \texttt{PIC-USB-4550-BOOT.hex}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{Pickit3_app9.jpeg}
+\caption{Select bootloader hex file}
+\label{Upload_Bootloader_5}
+\end{figure}
+
+\item Now Click on the \textit{Write} button as shown in the figure \ref{Upload_Bootloader_6}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{Pickit3_app11.jpeg}
+\caption{Write Hex File}
+\label{Upload_Bootloader_6}
+\end{figure}
+
+
+\item Once hex file gets written on the micreocontroller successfully, the success message gets displayed on the application's message window as shown in figure \ref{Upload_Bootloader_7}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.8]{Pickit3_app12.jpeg}
+\caption{Hex File Uploaded Succesfully}
+\label{Upload_Bootloader_7}
+\end{figure}
+
+\item Done !!!. The bootloader is succesfully get uploaded into the microcontroller. Now close the Application
+
+\item Remove the \textit{PICKIT-3} from PC as well as from micro-controller.
+
+
+\end{enumerate}
+
+\chapter{Installing MCHPFSUSB v2.2 USB Framework}
+\chapter{Installing Driver}
+\chapter{Uploading firmware hex file}
+
+\appendix
+\chapter{Schematic}
+
 \end{document}

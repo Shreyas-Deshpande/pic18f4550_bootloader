@@ -1,3 +1,10 @@
 \contentsline {chapter}{\numberline {1}Getting Started...}{1}{}%
 \contentsline {section}{\numberline {1.1}Pre-requisites}{1}{}%
 \contentsline {section}{\numberline {1.2}Brief Procedure}{1}{}%
+\contentsline {chapter}{\numberline {2}Installing PICKIT-3 Application}{3}{}%
+\contentsline {section}{\numberline {2.1}Installation Procedure}{3}{}%
+\contentsline {section}{\numberline {2.2}Uploading Bootloader}{5}{}%
+\contentsline {chapter}{\numberline {3}Installing MCHPFSUSB v2.2 USB Framework}{11}{}%
+\contentsline {chapter}{\numberline {4}Installing Driver}{12}{}%
+\contentsline {chapter}{\numberline {5}Uploading firmware hex file}{13}{}%
+\contentsline {chapter}{\numberline {A}Schematic}{14}{}%
