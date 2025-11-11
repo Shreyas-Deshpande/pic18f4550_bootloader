@@ -4,6 +4,7 @@
 \usepackage{float}
 \usepackage{tikz}
 \usetikzlibrary{calc}
+\usepackage{hyperref}
 
 \graphicspath{{./images/}}
 
@@ -155,7 +156,9 @@ This chapter guides you step-by-step to install the \textit{PICKIT-3 Application
 
 Congratulations !!! ... You have successfully installed the \textit{PICKIT-3 Application} on your PC.
 
+\newpage
 \section{Uploading Bootloader}
+\label{sec:Upload_Bootloader}
 Now you have installed the apllication, it's time to use that application to upload the PIC USB bootloder in to the \textit{PIC18F4550} micro-controller.\par
 Follow the steps given bellow to upload the USB bootloader.
 
@@ -233,6 +236,7 @@ Follow the steps given bellow to upload the USB bootloader.
 \end{enumerate}
 
 \chapter{Installing MCHPFSUSB v2.2 USB Framework}
+\label{chap:MCHPFSUSB}
 In this chapter we are going to install the MCHPFSUSB USB Framework of version 2.2. This Framework provides USB bootloader drivers as well as firmware hex file upload tool.\par
 
 Following steps guide you to install the MCHPFSUSB USB Framework on your PC.
@@ -317,7 +321,90 @@ Click on the \textit{Finish} button to close the installer.
 \end{enumerate}
 
 \chapter{Installing Driver}
+In last \autoref{chap:MCHPFSUSB} we have completed the \textbf{MCHPFSUSB Framework}. Now it's time to install the drivers required to use \textit{PIC USB Bootloader}.\par
+For this you will required to connect the PIC18F4550 micro-controller to PC on which we have uploaded the bootloader's hex file, previously. \texttt{[Refer \autoref{sec:Upload_Bootloader}]}
 
+\begin{enumerate}
+\item Connect the PIC18F4550 microcontroller to the PC using USB cable. Also connect the Power supply to controller board and turn the board ON.
+\item Now we need to put the controller into bootloader mode / Programming mode.
+\item To put the board into the Programming moed, press and hold the User button connected to \textbf{PB4} pin, and then press and release the \textbf{Reset} button. then release the \textbf{User button}.
+
+\item Now right click on \textit{This PC}, click on \textit{Manage}, then select \textit{Device Manager}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{Device_Driver1.jpeg}
+\caption{Device Manager}
+\label{Driver_1}
+\end{figure}
+
+\item The device manager will show unknown device as shown in figure \ref{Driver_1}. as we have not installed the driver yet.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{Device_Driver2.jpeg}
+\caption{Update Driver}
+\label{Driver_2}
+\end{figure}
+
+\item Right click on the \textit{Unknown Device}  and select \textit{Update Driver} as shown in figure \ref{Driver_2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{Device_Driver3.jpeg}
+\caption{Browse Folder}
+\label{Driver_3}
+\end{figure}
+
+\item On next window select \textit{Browse my conputer for drivers}, as shown in figure \ref{Driver_3}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{Device_Driver4.jpeg}
+\caption{Driver Location}
+\label{Driver_4}
+\end{figure}
+
+\item Now \textit{Device Manager} asks for the driver location. to select the driver folder, click on \textit{Browse} button as shown in the figure \ref{Driver_4}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{Device_Driver5.jpeg}
+\caption{Select Folder}
+\label{Driver_5}
+\end{figure}
+
+\item After clicking on \textit{Browse} button, navigate to \texttt{C:\textbackslash Microchip Solutions} as shown in figure \ref{Driver_5}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{Device_Driver6.jpeg}
+\caption{Include Subfolders}
+\label{Driver_6}
+\end{figure}
+
+\item Make sure that \textit{Include Subfolders} option is selected as shown in the figure \ref{Driver_6} and then click on \textit{Next} button.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{Device_Driver7.jpeg}
+\caption{Driver Installed}
+\label{Driver_7}
+\end{figure}
+
+\item Now wait for some time to driver gets installed. Once the drivers get installed on the PC, the device manager will show you the window as shown in figure \ref{Driver_7}. Click on the \textit{Close} button to close the driver installer window.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{Device_Driver8.jpeg}
+\caption{Confirm the installed driver}
+\label{Driver_8}
+\end{figure}
+
+\item you can now see the controller is detected by \textit{Device Manager} as \texttt{Microchip Custom USB Device} as shown in figure \ref{Driver_8}. Which confirms that driver installation is succesfull.
+
+\end{enumerate}
+ 
 \chapter{Uploading firmware hex file}
 
 \appendix
