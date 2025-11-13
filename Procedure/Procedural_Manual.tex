@@ -94,11 +94,23 @@ We have provided you the folder with alll the \textit{installation} files, \text
 \end{enumerate}
 
 This is the brief procedure for power users who are used to the \textit{Microchip's} and \textit{PIC microcontroller's} eco-system.\par
-If you are not familier with this eco-system or you find the above procedure hard, don't worry, I have given the detailed and stepwise procedure in later part of this document, which will guide you making your PIC bootloader experience buttery smooth. 
+If you are not familier with this eco-system or you find the above procedure hard, don't worry, I have given the detailed and step-wise procedure in later part of this document, which will guide you to make your PIC bootloader experience buttery smooth. 
 
 
 \chapter{Installing PICKIT-3 Application}
+\section{About this chapter}
 This chapter guides you step-by-step to install the \textit{PICKIT-3 Application.} Follow the procedure as mentioned bellow and at the end you will end up with \textit{PICKIT-3 Application} installed in your PC succesfully.\par
+
+\section{Requirements}
+\begin{itemize}
+\item PIC18F4550 micro-controller board with \textit{ICSP} connector
+\item PICKIT-3 Programmer
+\item USB cable to coonect prograamer to PC.
+\item Jumper wires / Ribbon Cable to connect PICKIT-3 to micro-controller board.
+\item PICKIT-3 PC application
+\item Bootloader's Hex File
+\item PC/Laptop to run the application.
+\end{itemize}
 
 \section{Installation Procedure}
 \label{install_pickit3_app}
@@ -237,10 +249,13 @@ Follow the steps given bellow to upload the USB bootloader.
 
 \chapter{Installing MCHPFSUSB v2.2 USB Framework}
 \label{chap:MCHPFSUSB}
+
+\section{About this Chapter}
 In this chapter we are going to install the MCHPFSUSB USB Framework of version 2.2. This Framework provides USB bootloader drivers as well as firmware hex file upload tool.\par
 
 Following steps guide you to install the MCHPFSUSB USB Framework on your PC.
 
+\section{Installation Procedure}
 \begin{enumerate}
 \item Navigate to the MCHPFSUSB installer folder and run the setup file as shown in the Figure .
 
@@ -321,9 +336,19 @@ Click on the \textit{Finish} button to close the installer.
 \end{enumerate}
 
 \chapter{Installing Driver}
+\section{About this Chapter}
 In last \autoref{chap:MCHPFSUSB} we have completed the \textbf{MCHPFSUSB Framework}. Now it's time to install the drivers required to use \textit{PIC USB Bootloader}.\par
 For this you will required to connect the PIC18F4550 micro-controller to PC on which we have uploaded the bootloader's hex file, previously. \texttt{[Refer \autoref{sec:Upload_Bootloader}]}
 
+\section{Requirements}
+
+\begin{itemize}
+\item PIC18F4550 micro-controller with bootloader
+\item PC or laptop to install driver
+\item USB cable to coonect mico-controller board to PC/Laptop
+\end{itemize}
+
+\section{Installation Procedure}
 \begin{enumerate}
 \item Connect the PIC18F4550 microcontroller to the PC using USB cable. Also connect the Power supply to controller board and turn the board ON.
 \item Now we need to put the controller into bootloader mode / Programming mode.
@@ -405,7 +430,64 @@ For this you will required to connect the PIC18F4550 micro-controller to PC on w
 
 \end{enumerate}
  
-\chapter{Uploading firmware hex file}
+\chapter{Uploading Firmware Hex File}
+\section{About this chapter}
+In last Chapter we have installed the drivers, so our micro-controller with USB bootloader will get detected by \textit{Device Manager}.\par
+
+Now we can upload the \textit{Hex} file of the \textit{Firmware} we have written for the \textbf{PIC18F4550} micro-controller. If you don't have the firmware hex file, you can write simple application/firmware in \textbf{MPLAB IDE} and generate the hex file by compiling source code.\par
+
+
+
+\section{Requirements}
+\begin{itemize}
+\item PIC18F4550 micro-controller with USB bootloader
+\item USB cable to connect micro-controller board with PC/Laptop
+\item Power Adapter for mico-controller board \texttt{[If Required]}
+\item \textbf{PDFSUSB} PC Application to upload firmware hex file
+\item Firmware hex file to upload
+\item PC/Laptop
+\end{itemize}
+You will not required to install the \textit{PDFSUSB} PC application separately as its get installed along with MCHPFSUSB USB Framework. Please refer the \autoref{chap:MCHPFSUSB} for \textit{MCHPFSUSB USB Framework} installtion procedure if you have not installed it yet.
+
+\section{Procedure}
+
+\begin{enumerate}
+\item From your PC/Laptop navigate to \texttt{This PC -> Local Disk(C:) -> Microchip Solutions -> USB Tools -> Pdfusb}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{PDFSUSB1.jpeg}
+\caption{Locate Application exe file}
+\label{PDFSUSB_1}
+\end{figure}
+
+\item At this location you can find the \texttt{PDFUSB.exe}  file, as shown in figure \ref{PDFSUSB_1}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{PDFSUSB3.jpeg}
+\caption{Select Micro-controller Device}
+\label{PDFSUSB_2}
+\end{figure}
+
+\item A new window will open, at this window, select the microcontroller device as shown in the figure \ref{PDFSUSB_2}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.6]{PDFSUSB5.jpeg}
+\caption{Load Hex File}
+\label{PDFSUSB_3}
+\end{figure}
+
+\item As shown in figure \ref{PDFSUSB_3}, click on the \textit{Load Hex File} button and select the hex file of your firmware.
+
+\item The hex file contents can be seen in the white text area, situated at the bottom side of the application. Which also ensures that the hex file is uploaded succefully.
+
+\item now click on the \textit{Program Device} button so, the hex file we have selected in prevois step is get uploaded in to the micro-controller.
+
+\item After hex file gets uploaded succesfully, you can click on the \textit{Execute} button from the application or push the \textit{Reset} button on the micro-controller board to start execution of the firmware.
+
+\end{enumerate}
 
 \appendix
 \chapter{Schematic}
